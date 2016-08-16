@@ -1,0 +1,20 @@
+// Media query
+@mixin breakpoint($point) {
+  @if $point==small {
+    @media (min-width: 35em) {
+      @content ;
+    }
+  }
+  @else if $point==medium {
+    @media (min-width: 64em) {
+      @content ;
+    }
+  }
+}
+
+// Transition
+@mixin transition ($property, $duration, $timing-function) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+}

@@ -1,0 +1,15 @@
+// Typography
+
+body {
+  font-family: $font-primary;
+}
+
+.cw__title--heading {
+  font-size: 19px;
+  font-weight: bold;
+  color: #324649;
+
+  @include breakpoint(small) {
+    font-size: 22px;
+  }
+}

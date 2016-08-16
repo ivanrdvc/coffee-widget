@@ -1,0 +1,104 @@
+// Primary
+.container {
+  max-width: 800px;
+  margin: 7vh auto 1vh;
+}
+
+.wrap {
+  background: url('../img/coffee-bg.png') no-repeat center center;
+  background-size: cover;
+  padding-top: 20px;
+  margin-bottom: 7vh;
+}
+
+.cw {
+  max-width: 555px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &__img {
+
+    img {
+      margin-bottom: -4px;
+    }
+  }
+
+  &__header {
+    background: #fff;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: nowrap;
+
+    @media (min-width: 560px) {
+      padding: 30px 40px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    flex-basis: 82%;
+
+    &--dot {
+      margin-right: 30px;
+
+      &:after {
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        background-color: $color-primary;
+        top: 7px;
+        overflow: hidden;
+        content: "";
+        display: block;
+      }
+    }
+
+    &--heading {
+      margin-top: 0;
+    }
+
+    @include breakpoint(small) {
+      &--dot {
+        margin-right: 46px;
+
+        &:after {
+          width: 16px;
+          height: 16px;
+          top: 8px;
+        }
+      }
+    }
+  }
+
+  &__price {
+    //flex-basis: 25%;
+  }
+
+  &__price-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 2px;
+    background-color: $color-secondary;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(small) {
+      width: 85px;
+      height: 85px;
+    }
+  }
+
+  &__price-number {
+    align-self: center;
+    color: #fff;
+    font-size: 20px;
+
+    @include breakpoint(small) {
+      font-size: 26px;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
