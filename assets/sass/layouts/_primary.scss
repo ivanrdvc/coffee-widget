@@ -1,31 +1,86 @@
 // Primary
+body {
+  background: #4a4f6f;
+}
+
 .container {
   max-width: 800px;
-  margin: 7vh auto 1vh;
+  margin: 0 auto;
 }
 
 .wrap {
-  background: url('../img/coffee-bg.png') no-repeat center center;
+  //background: url('../img/coffee-bg.jpg') no-repeat center center;
   background-size: cover;
-  padding-top: 20px;
+  padding: 30px 0;
   margin-bottom: 7vh;
 }
 
 .cw {
-  max-width: 555px;
+  max-width: 554px;
   padding: 0 15px;
   margin: 0 auto;
 
   &__img {
+    position: relative;
 
     img {
-      margin-bottom: -4px;
+      margin-bottom: -5px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    background: #fff;
+    width: 35px;
+    height: 35px;
+    right: -30px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    @include transition(background, .3s, ease);
+
+    &--like {
+      right: 3%;
+    }
+
+    &--share {
+      right: 15%;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background: darken(#fff, 10%);
+    }
+
+    @include breakpoint(small) {
+      width: 50px;
+      height: 50px;
+
+      &--share {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: 710px) {
+        width: 50px;
+        height: 50px;
+        right: -30px;
+
+        &--like {
+          top: 20px;
+
+        }
+
+        &--share {
+          top: 80px;
+      }
     }
   }
 
   &__header {
     background: #fff;
-    padding: 15px 20px;
+    padding: 15px;
     display: flex;
     flex-wrap: nowrap;
 
@@ -39,7 +94,7 @@
     flex-basis: 82%;
 
     &--dot {
-      margin-right: 30px;
+      margin-right: 25px;
 
       &:after {
         position: absolute;
@@ -57,6 +112,10 @@
       margin-top: 0;
     }
 
+    p {
+      margin: 0;
+    }
+
     @include breakpoint(small) {
       &--dot {
         margin-right: 46px;
@@ -68,10 +127,6 @@
         }
       }
     }
-  }
-
-  &__price {
-    //flex-basis: 25%;
   }
 
   &__price-box {
@@ -99,6 +154,134 @@
   }
 }
 
-img {
-  max-width: 100%;
+// Rating
+
+
+// Coffee Widget Messsge
+.cw__message {
+  background: #eff2f2;
+  padding: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    background: #ced0d5;
+    content: "";
+    display: block;
+    width: 2px;
+    height: 40px;
+    top: 15px;
+    right: 8px;
+  }
+
+  @include breakpoint(small) {
+    padding: 22px 40px;
+
+    &:after {
+      height: 55px;
+    }
+  }
+
+}
+
+.cw__portrait {
+  margin-right: 15px;
+}
+
+.cw__message-text {
+  flex-basis: 82%;
+
+  p {
+    margin-bottom: 5px;
+  }
+}
+
+@include breakpoint(small) {
+  .cw__portrait {
+    margin-right: 35px;
+  }
+}
+
+// Coffee Widget Comment
+
+.cw__comment {
+  background: #fff;
+  padding: 15px 20px;
+
+  form {
+    height: 40px;
+  }
+
+  textarea {
+    width: 85%;
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid transparent;
+    color: #76898d;
+    @include transition(all, .2s, ease);
+
+    &:focus {
+      border: none;
+      border-bottom: 1px solid #ced0d5;
+      outline: none;
+    }
+
+  }
+
+  .cw__input {
+    /* reset input */
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+
+    float: right;
+  }
+
+  @include breakpoint(small) {
+    padding: 15px 40px;
+
+    form {
+      height: 25px;
+    }
+    textarea {
+      height: 25px;
+      font-size: 16px;
+    }
+  }
+}
+
+
+/* non-project related stuff */
+footer {
+  max-width: 555px;
+  margin: 0 auto;
+  padding: 0 13px;
+
+  p {
+    color: #fff;
+    font-size: 15px;
+  }
+
+  a {
+    color: #2ecca1;
+    @include transition(color, .3s, ease);
+
+    &:hover {
+      color: darken(#2ecca1, 10%);
+    }
+  }
 }
