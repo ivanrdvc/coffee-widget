@@ -3,14 +3,14 @@ body {
   background: #4a4f6f;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
+//.container {
+//  max-width: 585px;
+//  overflow: hidden;
+//  margin: 0 auto;
+//}
 
 .wrap {
   //background: url('../img/coffee-bg.jpg') no-repeat center center;
-  background-size: cover;
   padding: 30px 15px;
   margin-bottom: 7vh;
 }
@@ -279,7 +279,7 @@ body {
 
 /* non-project related stuff */
 footer {
-  max-width: 555px;
+  max-width: 595px;
   margin: 0 auto;
   padding: 0 13px;
 

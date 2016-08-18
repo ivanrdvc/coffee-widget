@@ -1,0 +1,83 @@
+// Slider
+
+body {
+  max-width: 631px;
+  margin: 0 auto;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.slider {
+  width: 200%;
+  transform: translate3d(0, 0, 0);
+  transition: transform .5s ease-in-out;
+  //transition: left .5s ease-in-out;
+
+}
+
+.slider__item {
+  float: left;
+  width: 47.5%;
+  white-space: normal;
+  background-repeat: no-repeat;
+
+  &:first-child {
+    margin-right: 10px;
+  }
+
+  &:last-child {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 390px) {
+  .slider__item {
+    width: 48%;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+  ;
+  }
+}
+
+.slider-nav {
+  text-align: center;
+  max-width: 631px;
+}
+
+.slider-nav ul {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.slider-nav .slider-nav__item {
+  float: left;
+  text-align: center;
+  margin: 10px;
+  list-style: none;
+  cursor: pointer;
+  background-color: #aaa5a3;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.slider-nav .slider-nav__item:hover {
+  background-color: #fff;
+}
+
+.slider-nav .slider-nav__item.active {
+  background-color: #fff;
+  color: #FFFFFF;
+}
+
+.slider__item--two {
+  .cw__title--dot:after,
+  .cw__price-box {
+    background-color: #ffdf2b;
+  }
+}

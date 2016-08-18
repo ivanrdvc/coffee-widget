@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Ivan Radovic">
   <meta name="description" content="Coffee Widget">
-  <title>Signup Form</title>
+  <title>Coffee Widget</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -14,61 +14,119 @@
 
 <div class="container">
 
-  <div class="wrap">
-    <div class="cw">
-      <div class="cw__img">
-        <img src="assets/img/coffee-header.jpg" alt="Coffee Header">
-        <a class="cw__btn cw__btn--like" href="#"><span class="cw__icon--like"></span></a>
-        <a class="cw__btn cw__btn--share" href="#"><span class="cw__icon--share"></span></a>
-      </div>
+  <div class="wrap slider">
 
-      <div class="cw__content">
-        <div class="cw__header">
-          <div class="cw__title">
-            <h3 class="cw__title--heading"><span class="cw__title--dot"></span>Hot Espresso Coffee</h3>
-            <div class="star-rating">
-              <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
-              <label class="cw__icon--star" for="star-rating-5" title="5 out of 5 stars"></label>
-              <input class="star-rating__input cw__icon--star" id="star-rating-4" type="radio" name="rating" value="4">
-              <label class="cw__icon--star" for="star-rating-4" title="4 out of 5 stars"></label>
-              <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
-              <label class="cw__icon--star" for="star-rating-3" title="3 out of 5 stars"></label>
-              <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
-              <label class="cw__icon--star" for="star-rating-2" title="2 out of 5 stars"></label>
-              <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
-              <label class="cw__icon--star" for="star-rating-1" title="1 out of 5 stars"></label>
+    <div class="slider__item slider__item--one">
+      <div class="cw">
+        <div class="cw__img">
+          <img src="assets/img/coffee-header.jpg" alt="Coffee Header">
+          <a class="cw__btn cw__btn--like" href="#"><span class="cw__icon--like"></span></a>
+          <a class="cw__btn cw__btn--share" href="#"><span class="cw__icon--share"></span></a>
+        </div>
+        <div class="cw__content">
+          <div class="cw__header">
+            <div class="cw__title">
+              <h3 class="cw__title--heading"><span class="cw__title--dot"></span>Hot Espresso Coffee</h3>
+              <div class="star-rating">
+                <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                <label class="cw__icon--star" for="star-rating-5" title="5 out of 5 stars"></label>
+                <input class="star-rating__input cw__icon--star" id="star-rating-4" type="radio" name="rating"
+                       value="4">
+                <label class="cw__icon--star" for="star-rating-4" title="4 out of 5 stars"></label>
+                <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                <label class="cw__icon--star" for="star-rating-3" title="3 out of 5 stars"></label>
+                <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                <label class="cw__icon--star" for="star-rating-2" title="2 out of 5 stars"></label>
+                <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                <label class="cw__icon--star" for="star-rating-1" title="1 out of 5 stars"></label>
+              </div>
+              <p class="cw__text cw_text--location"><span class="cw__icon--location"></span>Grind Coffee Bar, <strong>London</strong>
+              </p>
             </div>
-            <p class="cw__text cw_text--location"><span class="cw__icon--location"></span>Grind Coffee Bar, <strong>London</strong>
-            </p>
-          </div>
-
-          <div class="cw__price">
-            <div class="cw__price-box">
-              <span class="cw__price-number"><strong>52</strong>£</span>
+            <div class="cw__price">
+              <div class="cw__price-box">
+                <span class="cw__price-number"><strong>52</strong>£</span>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="cw__message">
-          <div class="cw__portrait">
-            <img src="assets/img/cw-portrait.png" alt="Portrait">
+          <div class="cw__message">
+            <div class="cw__portrait">
+              <img src="assets/img/cw-portrait.png" alt="Portrait">
+            </div>
+            <div class="cw__message-text">
+              <p class="cw__text">A Deliciuos coffee that I have never tasted before...</p>
+              <span class="cw__text cw__text--right">-Julia Winslet</span>
+            </div>
           </div>
-
-          <div class="cw__message-text">
-            <p class="cw__text">A Deliciuos coffee that I have never tasted before...</p>
-            <span class="cw__text cw__text--right">-Julia Winslet</span>
+          <div class="cw__comment">
+            <form>
+              <textarea placeholder="Add Your Comments..."></textarea>
+              <button class="cw__input" type="submit" value=""><span class="cw__icon--arrow"></span></button>
+            </form>
           </div>
-        </div>
-
-        <div class="cw__comment">
-          <form>
-            <textarea placeholder="Add Your Comments..."></textarea>
-            <button class="cw__input" type="submit" value=""><span class="cw__icon--arrow"></span></button>
-          </form>
         </div>
       </div>
-
     </div>
+    <!--End of slider one-->
+
+    <div class="slider__item slider__item--two">
+      <div class="cw">
+        <div class="cw__img">
+          <img src="assets/img/coffee-header.jpg" alt="Coffee Header">
+          <a class="cw__btn cw__btn--like" href="#"><span class="cw__icon--like"></span></a>
+          <a class="cw__btn cw__btn--share" href="#"><span class="cw__icon--share"></span></a>
+        </div>
+        <div class="cw__content">
+          <div class="cw__header">
+            <div class="cw__title">
+              <h3 class="cw__title--heading"><span class="cw__title--dot"></span>Hot Espresso Coffee</h3>
+              <div class="star-rating">
+                <input class="star-rating__input" id="star-rating-10" type="radio" name="rating" value="5">
+                <label class="cw__icon--star" for="star-rating-10" title="5 out of 5 stars"></label>
+                <input class="star-rating__input cw__icon--star" id="star-rating-9" type="radio" name="rating"
+                       value="4">
+                <label class="cw__icon--star" for="star-rating-9" title="4 out of 5 stars"></label>
+                <input class="star-rating__input" id="star-rating-8" type="radio" name="rating" value="3">
+                <label class="cw__icon--star" for="star-rating-8" title="3 out of 5 stars"></label>
+                <input class="star-rating__input" id="star-rating-7" type="radio" name="rating" value="2">
+                <label class="cw__icon--star" for="star-rating-7" title="2 out of 5 stars"></label>
+                <input class="star-rating__input" id="star-rating-6" type="radio" name="rating" value="1">
+                <label class="cw__icon--star" for="star-rating-6" title="1 out of 5 stars"></label>
+              </div>
+              <p class="cw__text cw_text--location"><span class="cw__icon--location"></span>Grind Coffee Bar, <strong>London</strong>
+              </p>
+            </div>
+            <div class="cw__price">
+              <div class="cw__price-box">
+                <span class="cw__price-number"><strong>52</strong>£</span>
+              </div>
+            </div>
+          </div>
+          <div class="cw__message">
+            <div class="cw__portrait">
+              <img src="assets/img/cw-portrait.png" alt="Portrait">
+            </div>
+            <div class="cw__message-text">
+              <p class="cw__text">A Deliciuos coffee that I have never tasted before...</p>
+              <span class="cw__text cw__text--right">-Julia Winslet</span>
+            </div>
+          </div>
+          <div class="cw__comment">
+            <form>
+              <textarea placeholder="Add Your Comments..."></textarea>
+              <button class="cw__input" type="submit" value=""><span class="cw__icon--arrow"></span></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of slider two-->
+  </div>
+  <div class="slider-nav">
+    <ul>
+      <li class="itemLinks slider-nav__item" data-pos="0"></li>
+      <li class="itemLinks slider-nav__item" data-pos="-49%"></li>
+    </ul>
   </div>
 
   <footer class="footer">
@@ -79,5 +137,6 @@
   </footer>
 </div>
 
+<script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 /*
   Author: Ivan Radovic
-  Author URI: http://ivanrdvc.com/
+  Author URI: https://ivanrdvc.com/
   Version: 1.0
 */
 
@@ -13,14 +13,12 @@
 @import "base/typography";
 
 // Layouts
-@import "layouts/grid";
 @import "layouts/primary";
-@import "layouts/secondary";
 
 // Modules
-@import "modules/menus";
+@import "modules/slider";
 @import "modules/icons";
-@import "modules/buttons";
+
 
 
 
