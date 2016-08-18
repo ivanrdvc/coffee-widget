@@ -184,6 +184,8 @@ body {
   color: #76898d; }
   .cw__text--right {
     float: right; }
+  .cw__text--location {
+    margin: 0; }
   @media (min-width: 35em) {
     .cw__text {
       font-size: 16px; } }
@@ -191,7 +193,8 @@ body {
 .cw__title--heading {
   font-size: 19px;
   font-weight: bold;
-  color: #324649; }
+  color: #324649;
+  margin-bottom: 7px; }
   @media (min-width: 35em) {
     .cw__title--heading {
       font-size: 22px; } }
@@ -205,17 +208,17 @@ body {
 
 .wrap {
   background-size: cover;
-  padding: 30px 0;
+  padding: 30px 15px;
   margin-bottom: 7vh; }
 
 .cw {
   max-width: 554px;
-  padding: 0 15px;
   margin: 0 auto; }
   .cw__img {
     position: relative; }
     .cw__img img {
-      margin-bottom: -5px; }
+      margin-bottom: -5px;
+      max-width: 100%; }
   .cw__btn {
     position: absolute;
     background: #fff;
@@ -275,8 +278,6 @@ body {
         display: block; }
     .cw__title--heading {
       margin-top: 0; }
-    .cw__title p {
-      margin: 0; }
     @media (min-width: 35em) {
       .cw__title--dot {
         margin-right: 46px; }
@@ -302,6 +303,32 @@ body {
     @media (min-width: 35em) {
       .cw__price-number {
         font-size: 26px; } }
+
+.star-rating {
+  display: inline-block;
+  margin-left: 25px;
+  margin-bottom: 5px; }
+  @media (min-width: 35em) {
+    .star-rating {
+      margin-left: 45px; } }
+
+.cw__icon--star {
+  float: right;
+  padding-left: 2px;
+  cursor: pointer;
+  color: #FFB300; }
+
+.cw__icon--star:last-child {
+  padding-left: 0; }
+
+.star-rating__input {
+  display: none; }
+
+.cw__icon--star:hover:before,
+.cw__icon--star:hover ~ .cw__icon--star:before,
+.star-rating__input:checked ~ .cw__icon--star:before {
+  content: "\f104";
+  color: #ffdf2b; }
 
 .cw__message {
   background: #eff2f2;
@@ -338,12 +365,10 @@ body {
 
 .cw__comment {
   background: #fff;
-  padding: 15px 20px; }
-  .cw__comment form {
-    height: 40px; }
+  padding: 15px 20px 5px; }
   .cw__comment textarea {
     width: 85%;
-    height: 40px;
+    height: 32px;
     font-size: 14px;
     border: none;
     border-bottom: 1px solid transparent;
@@ -356,6 +381,7 @@ body {
       border-bottom: 1px solid #ced0d5;
       outline: none; }
   .cw__comment .cw__input {
+    float: right;
     /* reset input */
     margin: 0;
     padding: 0;
@@ -370,15 +396,11 @@ body {
     -moz-appearance: none;
     appearance: none;
     outline: none;
-    cursor: pointer;
-    float: right; }
+    cursor: pointer; }
   @media (min-width: 35em) {
     .cw__comment {
-      padding: 15px 40px; }
-      .cw__comment form {
-        height: 25px; }
+      padding: 15px 40px 5px; }
       .cw__comment textarea {
-        height: 25px;
         font-size: 16px; } }
 
 /* non-project related stuff */
@@ -388,7 +410,7 @@ footer {
   padding: 0 13px; }
   footer p {
     color: #fff;
-    font-size: 15px; }
+    font-size: 13px; }
   footer a {
     color: #2ecca1;
     transition-property: color;
@@ -396,6 +418,15 @@ footer {
     transition-timing-function: ease; }
     footer a:hover {
       color: #25a280; }
+  @media (min-width: 35em) {
+    footer p {
+      font-size: 15px; } }
+
+/* Helper classes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
 
 /*
   Flaticon icon font: Flaticon
@@ -437,6 +468,7 @@ footer {
 
 .cw__icon--star:before {
   content: "\f104";
+  font-size: 16px;
   color: #bdc3c7; }
 
 .cw__icon--arrow:before {
@@ -470,6 +502,10 @@ footer {
   align-self: center; }
 
 @media (min-width: 35em) {
+  .cw__icon--star:before {
+    content: "\f104";
+    font-size: 18px;
+    color: #bdc3c7; }
   .cw__icon--arrow:before {
     font-size: 24px; }
   .cw__icon--location:before {

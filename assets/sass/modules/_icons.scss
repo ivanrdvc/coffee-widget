@@ -37,6 +37,7 @@
 
 .cw__icon--star:before {
   content: "\f104";
+  font-size: 16px;
   color: #bdc3c7;
 }
 
@@ -77,6 +78,11 @@
 
 
 @include breakpoint(small) {
+  .cw__icon--star:before {
+    content: "\f104";
+    font-size: 18px;
+    color: #bdc3c7;
+  }
   .cw__icon--arrow:before {
     font-size: 24px;
   }
@@ -90,4 +96,3 @@
     font-size: 28px;
   }
 }
-

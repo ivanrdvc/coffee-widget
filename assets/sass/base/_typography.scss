@@ -13,6 +13,10 @@ body {
     float: right;
   }
 
+  &--location {
+    margin: 0;
+  }
+
   @include breakpoint(small) {
     font-size: 16px;
   }
@@ -22,6 +26,7 @@ body {
   font-size: 19px;
   font-weight: bold;
   color: #324649;
+  margin-bottom: 7px;
 
   @include breakpoint(small) {
     font-size: 22px;

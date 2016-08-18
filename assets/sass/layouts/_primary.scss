@@ -11,13 +11,12 @@ body {
 .wrap {
   //background: url('../img/coffee-bg.jpg') no-repeat center center;
   background-size: cover;
-  padding: 30px 0;
+  padding: 30px 15px;
   margin-bottom: 7vh;
 }
 
 .cw {
   max-width: 554px;
-  padding: 0 15px;
   margin: 0 auto;
 
   &__img {
@@ -25,6 +24,7 @@ body {
 
     img {
       margin-bottom: -5px;
+      max-width: 100%;
     }
   }
 
@@ -63,17 +63,17 @@ body {
     }
 
     @media (min-width: 710px) {
-        width: 50px;
-        height: 50px;
-        right: -30px;
+      width: 50px;
+      height: 50px;
+      right: -30px;
 
-        &--like {
-          top: 20px;
+      &--like {
+        top: 20px;
 
-        }
+      }
 
-        &--share {
-          top: 80px;
+      &--share {
+        top: 80px;
       }
     }
   }
@@ -110,10 +110,6 @@ body {
 
     &--heading {
       margin-top: 0;
-    }
-
-    p {
-      margin: 0;
     }
 
     @include breakpoint(small) {
@@ -154,8 +150,36 @@ body {
   }
 }
 
-// Rating
+// Coffee Widget Rating
+.star-rating {
+  display: inline-block;
+  margin-left: 25px;
+  margin-bottom: 5px;
 
+  @include breakpoint(small) {
+    margin-left: 45px;
+  }
+}
+
+.cw__icon--star {
+  float: right;
+  padding-left: 2px;
+  cursor: pointer;
+  color: #FFB300;
+}
+.cw__icon--star:last-child{
+  padding-left: 0;
+}
+.star-rating__input{
+  display: none;
+}
+.cw__icon--star:hover:before,
+.cw__icon--star:hover ~ .cw__icon--star:before,
+.star-rating__input:checked ~ .cw__icon--star:before
+{
+  content: "\f104";
+  color: #ffdf2b;
+}
 
 // Coffee Widget Messsge
 .cw__message {
@@ -183,7 +207,6 @@ body {
       height: 55px;
     }
   }
-
 }
 
 .cw__portrait {
@@ -205,18 +228,13 @@ body {
 }
 
 // Coffee Widget Comment
-
 .cw__comment {
   background: #fff;
-  padding: 15px 20px;
-
-  form {
-    height: 40px;
-  }
+  padding: 15px 20px 5px;
 
   textarea {
     width: 85%;
-    height: 40px;
+    height: 32px;
     font-size: 14px;
     border: none;
     border-bottom: 1px solid transparent;
@@ -228,10 +246,11 @@ body {
       border-bottom: 1px solid #ced0d5;
       outline: none;
     }
-
   }
 
   .cw__input {
+    float: right;
+
     /* reset input */
     margin: 0;
     padding: 0;
@@ -247,23 +266,16 @@ body {
     appearance: none;
     outline: none;
     cursor: pointer;
-
-    float: right;
   }
 
   @include breakpoint(small) {
-    padding: 15px 40px;
+    padding: 15px 40px 5px;
 
-    form {
-      height: 25px;
-    }
     textarea {
-      height: 25px;
       font-size: 16px;
     }
   }
 }
-
 
 /* non-project related stuff */
 footer {
@@ -273,7 +285,7 @@ footer {
 
   p {
     color: #fff;
-    font-size: 15px;
+    font-size: 13px;
   }
 
   a {
@@ -284,4 +296,17 @@ footer {
       color: darken(#2ecca1, 10%);
     }
   }
+
+  @include breakpoint(small) {
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+/* Helper classes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
