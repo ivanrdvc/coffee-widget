@@ -9,6 +9,10 @@ Designed by [365psd.com](http://365psd.com/day/4-277-coffee-widget) and develope
 * Codepen: [http://codepen.io/ivanrdvc](http://codepen.io/ivanrdvc)
 * Twitter: [@ivanrdvc](https://twitter.com/ivanrdvc)
 
+## Live demo
+
+[Demo.](http://codepen.io/ivanrdvc/full/AXzRqV/)
+
 ## License
 
 The code is available under the [MIT license.](http://www.opensource.org/licenses/mit-license.php)
