@@ -1,4 +1,4 @@
-var links = document.querySelectorAll(".itemLinks");
+var links = document.querySelectorAll(".slider-nav__item");
 var wrapper = document.querySelector(".slider");
 
 var activeLink = 0;
